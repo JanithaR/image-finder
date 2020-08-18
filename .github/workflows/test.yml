@@ -1,0 +1,18 @@
+name: Check code and Test
+on: [push]
+jobs:
+  test:
+    name: Check code and Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+      - name: Cache or Restore dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.cache/yarn
+          key: ${{ runner.os }}-node-modules-cache-${{ hashFiles('**/yarn.lock') }}
+      - name: Install dependencies
+        run: yarn --frozen-lockfile
+      - name: Check code and test
+        run: yarn check-code
