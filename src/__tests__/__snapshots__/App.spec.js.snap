@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search should render styles correctly 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+      "padding": 20,
+    }
+  }
+>
+  <View
+    style={
+      Object {
+        "flexDirection": "row",
+      }
+    }
+  >
+    <TextInput
+      allowFontScaling={true}
+      placeholder="Search Images"
+      rejectResponderTermination={true}
+      style={
+        Object {
+          "borderBottomLeftRadius": 10,
+          "borderColor": "#ddd",
+          "borderTopLeftRadius": 10,
+          "borderWidth": 1,
+          "flex": 1,
+          "fontSize": 18,
+          "paddingHorizontal": 15,
+        }
+      }
+      underlineColorAndroid="transparent"
+    />
+    <View
+      accessibilityRole="button"
+      accessible={true}
+      focusable={true}
+      onBlur={[Function]}
+      onClick={[Function]}
+      onFocus={[Function]}
+      onResponderGrant={[Function]}
+      onResponderMove={[Function]}
+      onResponderRelease={[Function]}
+      onResponderTerminate={[Function]}
+      onResponderTerminationRequest={[Function]}
+      onStartShouldSetResponder={[Function]}
+      style={
+        Array [
+          Object {
+            "backgroundColor": "#489c91",
+          },
+          Object {
+            "alignItems": "center",
+            "borderBottomRightRadius": 10,
+            "borderTopRightRadius": 10,
+            "justifyContent": "center",
+            "width": 60,
+          },
+        ]
+      }
+    >
+      <Text
+        allowFontScaling={false}
+        style={
+          Array [
+            Object {
+              "color": "#f6c446",
+              "fontSize": 30,
+            },
+            undefined,
+            Object {
+              "fontFamily": "Material Design Icons",
+              "fontStyle": "normal",
+              "fontWeight": "normal",
+            },
+            Object {},
+          ]
+        }
+      >
+        󰥷
+      </Text>
+    </View>
+  </View>
+</RCTSafeAreaView>
+`;
