@@ -16,13 +16,18 @@ import {
   TextInput,
   Pressable,
   View,
+  Dimensions,
 } from 'react-native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
 
 import strings from './strings';
 import colors from './colors';
+import testIds from './testIds';
+import { SearchForSomething } from './svg/SearchForSomething';
 
 declare const global: { HermesInternal: null | {} };
+
+const windowWidth: number = Dimensions.get('window').width;
 
 const App = () => {
   function onSearchPress() {
@@ -52,6 +57,10 @@ const App = () => {
             <Icon name="image-search" size={30} color={colors.primaryYellow} />
           </Pressable>
         </View>
+        <SearchForSomething
+          width={windowWidth - 40}
+          testID={testIds.searchForSomething}
+        />
       </SafeAreaView>
     </>
   );

@@ -8,7 +8,7 @@ function setup() {
 }
 
 describe('Search', () => {
-  it('should render styles correctly', () => {
+  it('should render correctly', () => {
     const { toJSON } = setup();
 
     expect(toJSON()).toMatchSnapshot();
@@ -25,4 +25,10 @@ describe('Search', () => {
 
     expect(queryByA11yRole('button')).toBeTruthy();
   });
+});
+
+it('should instruct the user to search for something', () => {
+  const { queryByTestId } = setup();
+
+  expect(queryByTestId('searchForSomething')).toBeTruthy();
 });
