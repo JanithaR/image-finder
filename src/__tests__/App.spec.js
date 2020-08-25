@@ -149,17 +149,17 @@ describe('Results', () => {
     fireEvent.scroll(getByTestId(testIds.resultsList), {
       nativeEvent: {
         contentOffset: {
-          y: 500,
+          y: 103,
         },
         contentSize: {
           // Dimensions of the scrollable content
-          height: 500,
-          width: 100,
+          height: 103,
+          width: 103,
         },
         layoutMeasurement: {
           // Dimensions of the device
-          height: 100,
-          width: 100,
+          height: 683,
+          width: 411,
         },
       },
     });
@@ -186,17 +186,17 @@ describe('Results', () => {
     fireEvent.scroll(getByTestId(testIds.resultsList), {
       nativeEvent: {
         contentOffset: {
-          y: 500,
+          y: 103,
         },
         contentSize: {
           // Dimensions of the scrollable content
-          height: 500,
-          width: 100,
+          height: 103,
+          width: 103,
         },
         layoutMeasurement: {
           // Dimensions of the device
-          height: 100,
-          width: 100,
+          height: 683,
+          width: 411,
         },
       },
     });
