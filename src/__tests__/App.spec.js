@@ -13,8 +13,6 @@ jest.mock('src/api', () => ({
   searchImages: jest.fn(() => Promise.resolve(mockedSearchResult)),
 }));
 
-jest.mock('src/config', () => ({ imagesPerPage: 10 }));
-
 function setup() {
   return render(<App />);
 }
@@ -62,7 +60,7 @@ describe('Search', () => {
     await waitFor(() => queryByTestId(testIds.searchIcon));
 
     expect(searchImages).toHaveBeenCalledTimes(1);
-    expect(searchImages).toHaveBeenCalledWith('car', 1, 10);
+    expect(searchImages).toHaveBeenCalledWith('car', 1, 30);
     expect(searchImages).toHaveReturnedTimes(1);
     expect(searchImages).toHaveReturnedWith(
       Promise.resolve(mockedSearchResult),
@@ -125,14 +123,14 @@ describe('Results', () => {
 
     await waitFor(() => getByTestId(testIds.searchIcon));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(10);
+    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
 
     fireEvent.changeText(getByDisplayValue('car'), 'bus');
     fireEvent.press(getByA11yRole('button'));
 
     await waitFor(() => getByTestId(testIds.searchIcon));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(10);
+    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
   });
 
   it('should fetch more results when the end of the list is reached', async () => {
@@ -146,7 +144,7 @@ describe('Results', () => {
 
     await waitFor(() => getByTestId(testIds.searchIcon));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(10);
+    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
 
     fireEvent.scroll(getByTestId(testIds.resultsList), {
       nativeEvent: {
@@ -169,8 +167,8 @@ describe('Results', () => {
     await waitFor(() => getByTestId(testIds.searchIcon));
 
     expect(searchImages).toHaveBeenCalledTimes(2);
-    expect(searchImages).toHaveBeenCalledWith('car', 2, 10);
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(20);
+    expect(searchImages).toHaveBeenCalledWith('car', 2, 30);
+    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(60);
   });
 
   it('should not automatically fetch more results on end of scroll if the query has changed', async () => {
@@ -181,7 +179,7 @@ describe('Results', () => {
 
     await waitFor(() => getByTestId(testIds.searchIcon));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(10);
+    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'bus');
 
@@ -243,6 +241,6 @@ describe('Results', () => {
 
     await waitFor(() => getByTestId(testIds.searchIcon));
 
-    expect(queryByText('Total: 26986')).toBeTruthy();
+    expect(queryByText('Total: 69982')).toBeTruthy();
   });
 });

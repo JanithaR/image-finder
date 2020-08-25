@@ -1,3 +1,3 @@
 export default {
-  imagesPerPage: 50,
+  imagesPerPage: 30,
 };
