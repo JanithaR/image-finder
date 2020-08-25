@@ -10,6 +10,10 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
+      - name: Create env file
+        run: |
+          touch .env
+          echo UNSPLASH_ACCESS_KEY=${{ secrets.UNSPLASH_ACCESS_KEY }} > .env
       - name: Cache or Restore dependencies
         uses: actions/cache@v2
         with:
