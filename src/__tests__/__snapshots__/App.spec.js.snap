@@ -103,7 +103,7 @@ exports[`Results should show no images found if there are no results 1`] = `
     ListEmptyComponent={
       <NoImagesFound
         testID="noImagesFound"
-        width={710}
+        width={750}
       />
     }
     data={Array []}
@@ -146,10 +146,10 @@ exports[`Results should show no images found if there are no results 1`] = `
     <View>
       <RNSVGSvgView
         align="xMidYMid"
-        bbHeight={523}
-        bbWidth={710}
+        bbHeight={552}
+        bbWidth={750}
         focusable={false}
-        height={523}
+        height={552}
         meetOrSlice={0}
         minX={0}
         minY={0}
@@ -162,15 +162,15 @@ exports[`Results should show no images found if there are no results 1`] = `
             },
             Object {
               "flex": 0,
-              "height": 523,
-              "width": 710,
+              "height": 552,
+              "width": 750,
             },
           ]
         }
         testID="noImagesFound"
         vbHeight={590.747}
         vbWidth={802.067}
-        width={710}
+        width={750}
       >
         <RNSVGGroup>
           <RNSVGPath
@@ -863,10 +863,10 @@ exports[`Search should render correctly 1`] = `
   </View>
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight={389}
-    bbWidth={710}
+    bbHeight={411}
+    bbWidth={750}
     focusable={false}
-    height={389}
+    height={411}
     meetOrSlice={0}
     minX={0}
     minY={0}
@@ -878,15 +878,15 @@ exports[`Search should render correctly 1`] = `
         },
         Object {
           "flex": 0,
-          "height": 389,
-          "width": 710,
+          "height": 411,
+          "width": 750,
         },
       ]
     }
     testID="searchForSomething"
     vbHeight={462.827}
     vbWidth={844.907}
-    width={710}
+    width={750}
   >
     <RNSVGGroup>
       <RNSVGPath
@@ -1666,10 +1666,10 @@ exports[`Search should show an error message if API failed 1`] = `
   </View>
   <RNSVGSvgView
     align="xMidYMid"
-    bbHeight={389}
-    bbWidth={710}
+    bbHeight={411}
+    bbWidth={750}
     focusable={false}
-    height={389}
+    height={411}
     meetOrSlice={0}
     minX={0}
     minY={0}
@@ -1681,15 +1681,15 @@ exports[`Search should show an error message if API failed 1`] = `
         },
         Object {
           "flex": 0,
-          "height": 389,
-          "width": 710,
+          "height": 411,
+          "width": 750,
         },
       ]
     }
     testID="searchForSomething"
     vbHeight={462.827}
     vbWidth={844.907}
-    width={710}
+    width={750}
   >
     <RNSVGGroup>
       <RNSVGPath

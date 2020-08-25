@@ -210,13 +210,13 @@ const App = () => {
             ListEmptyComponent={
               <NoImagesFound
                 testID={testIds.noImagesFound}
-                width={windowWidth - 40}
+                width={windowWidth}
               />
             }
           />
         ) : (
           <SearchForSomething
-            width={windowWidth - 40}
+            width={windowWidth}
             testID={testIds.searchForSomething}
           />
         )}
