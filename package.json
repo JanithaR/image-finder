@@ -14,8 +14,10 @@
     "react": "16.13.1",
     "react-native": "0.63.2",
     "react-native-dotenv": "^2.3.0",
+    "react-native-fast-image": "^8.3.2",
     "react-native-svg": "^12.1.0",
-    "react-native-vector-icons": "^7.0.0"
+    "react-native-vector-icons": "^7.0.0",
+    "unsplash-js": "^6.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.8.4",
@@ -26,6 +28,7 @@
     "@types/react-native": "^0.63.2",
     "@types/react-native-vector-icons": "^6.4.5",
     "@types/react-test-renderer": "^16.9.2",
+    "@types/unsplash-js": "^6.0.1",
     "@typescript-eslint/eslint-plugin": "^2.27.0",
     "@typescript-eslint/parser": "^2.27.0",
     "babel-jest": "^25.1.0",
@@ -46,6 +49,9 @@
       "jsx",
       "json",
       "node"
+    ],
+    "testPathIgnorePatterns": [
+      "src/__tests__/mockedSearchResults.ts"
     ]
   },
   "husky": {
