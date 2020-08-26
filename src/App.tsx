@@ -131,7 +131,7 @@ const App = () => {
     if (searchResults) {
       return (
         <View style={styles.resultsMetaWrapper}>
-          <Text>Total: {searchResults.total}</Text>
+          <Text style={styles.total}>Total: {searchResults.total}</Text>
         </View>
       );
     }
@@ -258,11 +258,14 @@ const styles = StyleSheet.create({
     borderColor: 'white',
   },
   errorWrapper: { paddingHorizontal: 20 },
-  resultsMetaWrapper: { paddingHorizontal: 20 },
+  resultsMetaWrapper: { paddingHorizontal: 20, paddingBottom: 10 },
   errorText: { color: 'red' },
   listItemSeparator: { height: 2 },
   list: {
     flex: 1,
+  },
+  total: {
+    fontSize: 16,
   },
 });
 

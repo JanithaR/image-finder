@@ -105,9 +105,10 @@ describe('Results', () => {
   });
 
   it('should instruct the user to search for something on launch', () => {
-    const { queryByTestId } = setup();
+    const { queryByTestId, toJSON } = setup();
 
     expect(queryByTestId('searchForSomething')).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should clear previous search results if the query changes', async () => {
@@ -137,7 +138,12 @@ describe('Results', () => {
     searchImages.mockResolvedValueOnce(mockedSearchResult);
     searchImages.mockResolvedValueOnce(mockedSearchResultExtended);
 
-    const { getByPlaceholderText, getByA11yRole, getByTestId } = setup();
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      getByTestId,
+      toJSON,
+    } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
@@ -145,6 +151,7 @@ describe('Results', () => {
     await waitFor(() => getByTestId(testIds.searchIcon));
 
     expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(toJSON()).toMatchSnapshot();
 
     fireEvent.scroll(getByTestId(testIds.resultsList), {
       nativeEvent: {
@@ -169,6 +176,7 @@ describe('Results', () => {
     expect(searchImages).toHaveBeenCalledTimes(2);
     expect(searchImages).toHaveBeenCalledWith('car', 2, 30);
     expect(getByTestId(testIds.resultsList).props.data).toHaveLength(60);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should not automatically fetch more results on end of scroll if the query has changed', async () => {
@@ -234,6 +242,7 @@ describe('Results', () => {
       getByA11yRole,
       getByTestId,
       queryByText,
+      toJSON,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
@@ -242,5 +251,6 @@ describe('Results', () => {
     await waitFor(() => getByTestId(testIds.searchIcon));
 
     expect(queryByText('Total: 69982')).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
   });
 });
