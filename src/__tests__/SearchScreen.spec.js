@@ -1,20 +1,23 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
-import App from 'src/App';
+import { SearchScreen } from 'src/screens/SearchScreen';
 import { searchImages } from 'src/api';
 import {
   mockedSearchResult,
   mockedSearchResultExtended,
 } from './mockedSearchResults';
-import testIds from '../testIds';
+import testIds from 'src/testIds';
+import { Routes } from 'src/enums/Routes';
 
 jest.mock('src/api', () => ({
   searchImages: jest.fn(() => Promise.resolve(mockedSearchResult)),
 }));
 
+const navigation = { navigate: jest.fn() };
+
 function setup() {
-  return render(<App />);
+  return render(<SearchScreen navigation={navigation} />);
 }
 
 describe('Search', () => {
@@ -252,5 +255,28 @@ describe('Results', () => {
 
     expect(queryByText('Total: 69982')).toBeTruthy();
     expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should call navigateTo() from react-navigation upon clicking on an item', async () => {
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      getByTestId,
+      queryByTestId,
+    } = setup();
+
+    fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
+    fireEvent.press(getByA11yRole('button'));
+
+    await waitFor(() => getByTestId(testIds.searchIcon));
+
+    expect(queryByTestId('ZRns2R5azu0')).toBeTruthy();
+
+    fireEvent.press(getByTestId('ZRns2R5azu0'));
+
+    expect(navigation.navigate).toHaveBeenCalledTimes(1);
+    expect(navigation.navigate).toHaveBeenCalledWith(Routes.Gallery, {
+      id: 'ZRns2R5azu0',
+    });
   });
 });
