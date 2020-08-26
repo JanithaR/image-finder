@@ -31,18 +31,18 @@ export interface ProfileImage {
 
 export interface User {
   id: string;
-  updated_at: Date;
+  updated_at: string;
   username: string;
   name: string;
   first_name: string;
-  last_name: string;
-  twitter_username: string;
-  portfolio_url: string;
-  bio: string;
-  location: string;
+  last_name: string | null;
+  twitter_username: string | null;
+  portfolio_url: string | null;
+  bio: string | null;
+  location: string | null;
   links: Links2;
   profile_image: ProfileImage;
-  instagram_username: string;
+  instagram_username: string | null;
   total_collections: number;
   total_likes: number;
   total_photos: number;
@@ -67,7 +67,7 @@ export interface Subcategory {
 export interface Ancestry {
   type: Type;
   category: Category;
-  subcategory: Subcategory;
+  subcategory?: Subcategory;
 }
 
 export interface Urls2 {
@@ -101,36 +101,16 @@ export interface ProfileImage2 {
   large: string;
 }
 
-export interface User2 {
-  id: string;
-  updated_at: Date;
-  username: string;
-  name: string;
-  first_name: string;
-  last_name: string;
-  twitter_username: string;
-  portfolio_url: string;
-  bio: string;
-  location: string;
-  links: Links4;
-  profile_image: ProfileImage2;
-  instagram_username: string;
-  total_collections: number;
-  total_likes: number;
-  total_photos: number;
-  accepted_tos: boolean;
-}
-
 export interface CoverPhoto {
   id: string;
-  created_at: Date;
-  updated_at: Date;
-  promoted_at: Date;
+  created_at: string;
+  updated_at: string;
+  promoted_at: string | null;
   width: number;
   height: number;
   color: string;
-  description: string;
-  alt_description: string;
+  description: string | null;
+  alt_description: string | null;
   urls: Urls2;
   links: Links3;
   categories: any[];
@@ -138,14 +118,14 @@ export interface CoverPhoto {
   liked_by_user: boolean;
   current_user_collections: any[];
   sponsorship?: any;
-  user: User2;
+  user: User;
 }
 
 export interface Source {
   ancestry: Ancestry;
   title: string;
   subtitle: string;
-  description: string;
+  description: string | null;
   meta_title: string;
   meta_description: string;
   cover_photo: CoverPhoto;
@@ -154,19 +134,19 @@ export interface Source {
 export interface Tag {
   type: string;
   title: string;
-  source: Source;
+  source?: Source;
 }
 
 export interface Result {
   id: string;
-  created_at: Date;
-  updated_at: Date;
-  promoted_at?: Date;
+  created_at: string;
+  updated_at: string;
+  promoted_at: string | null;
   width: number;
   height: number;
   color: string;
-  description: string;
-  alt_description: string;
+  description: string | null;
+  alt_description: string | null;
   urls: Urls;
   links: Links;
   categories: any[];
