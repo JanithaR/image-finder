@@ -1,4 +1,6 @@
-export const mockedSearchResult = {
+import { UnsplashSearchResults } from '../interfaces/UnsplashSearchResults';
+
+export const mockedSearchResult: UnsplashSearchResults = {
   total: 69982,
   total_pages: 2333,
   results: [
@@ -6042,7 +6044,7 @@ export const mockedSearchResult = {
   ],
 };
 
-export const mockedSearchResultExtended = {
+export const mockedSearchResultExtended: UnsplashSearchResults = {
   total: 69982,
   total_pages: 2333,
   results: [

@@ -1,20 +1,24 @@
 import React from 'react';
 import { render, fireEvent, waitFor } from '@testing-library/react-native';
 
-import App from 'src/App';
+import { SearchScreen } from 'src/screens/SearchScreen';
 import { searchImages } from 'src/api';
 import {
   mockedSearchResult,
   mockedSearchResultExtended,
 } from './mockedSearchResults';
-import testIds from '../testIds';
+import testIds from 'src/testIds';
+import { Routes } from 'src/enums/Routes';
+import accessibilityLabels from '../accessibilityLabels';
 
 jest.mock('src/api', () => ({
   searchImages: jest.fn(() => Promise.resolve(mockedSearchResult)),
 }));
 
+const navigation = { navigate: jest.fn() };
+
 function setup() {
-  return render(<App />);
+  return render(<SearchScreen navigation={navigation} />);
 }
 
 describe('Search', () => {
@@ -35,9 +39,11 @@ describe('Search', () => {
   });
 
   it('should render a search button', () => {
-    const { queryByA11yRole } = setup();
+    const { queryByA11yRole, queryByA11yLabel } = setup();
 
     expect(queryByA11yRole('button')).toBeTruthy();
+    expect(queryByA11yRole('imagebutton')).toBeTruthy();
+    expect(queryByA11yLabel(accessibilityLabels.search)).toBeTruthy();
   });
 
   it('should update search input when typed', () => {
@@ -49,15 +55,15 @@ describe('Search', () => {
   });
 
   it('should call searchImage() from api utils when seach button is pressed', async () => {
-    const { getByA11yRole, getByPlaceholderText, queryByTestId } = setup();
+    const { getByA11yRole, getByPlaceholderText, queryByA11yRole } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
 
-    expect(queryByTestId(testIds.activityIndicator)).toBeTruthy();
-    expect(queryByTestId(testIds.searchIcon)).toBeFalsy();
+    expect(queryByA11yRole('progressbar')).toBeTruthy();
+    expect(queryByA11yRole('imagebutton')).toBeFalsy();
 
-    await waitFor(() => queryByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yRole('imagebutton'));
 
     expect(searchImages).toHaveBeenCalledTimes(1);
     expect(searchImages).toHaveBeenCalledWith('car', 1, 30);
@@ -68,11 +74,11 @@ describe('Search', () => {
   });
 
   it('should not call searchImage() from api utils if query is empty', () => {
-    const { getByA11yRole, queryByTestId } = setup();
+    const { getByA11yRole, queryByA11yLabel } = setup();
 
     fireEvent.press(getByA11yRole('button'));
 
-    expect(queryByTestId(testIds.searchIcon)).toBeTruthy();
+    expect(queryByA11yLabel(accessibilityLabels.search)).toBeTruthy();
     expect(searchImages).toHaveBeenCalledTimes(0);
   });
 
@@ -85,14 +91,14 @@ describe('Search', () => {
       queryByPlaceholderText,
       queryByA11yRole,
       queryByText,
-      getByTestId,
+      queryByA11yLabel,
       toJSON,
     } = setup();
 
     fireEvent.changeText(queryByPlaceholderText('Search Images'), 'car');
     fireEvent.press(queryByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(queryByText('Unsplash API error')).toBeTruthy();
     expect(toJSON()).toMatchSnapshot();
@@ -105,48 +111,59 @@ describe('Results', () => {
   });
 
   it('should instruct the user to search for something on launch', () => {
-    const { queryByTestId } = setup();
+    const { queryByA11yLabel, toJSON } = setup();
 
-    expect(queryByTestId('searchForSomething')).toBeTruthy();
+    expect(
+      queryByA11yLabel(accessibilityLabels.searchForSomething),
+    ).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should clear previous search results if the query changes', async () => {
     const {
       getByPlaceholderText,
       getByA11yRole,
-      getByTestId,
       getByDisplayValue,
+      queryByA11yLabel,
+      queryByTestId,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
 
     fireEvent.changeText(getByDisplayValue('car'), 'bus');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
   });
 
   it('should fetch more results when the end of the list is reached', async () => {
     searchImages.mockResolvedValueOnce(mockedSearchResult);
     searchImages.mockResolvedValueOnce(mockedSearchResultExtended);
 
-    const { getByPlaceholderText, getByA11yRole, getByTestId } = setup();
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      queryByTestId,
+      toJSON,
+      queryByA11yLabel,
+    } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(toJSON()).toMatchSnapshot();
 
-    fireEvent.scroll(getByTestId(testIds.resultsList), {
+    fireEvent.scroll(queryByTestId(testIds.resultsList), {
       nativeEvent: {
         contentOffset: {
           y: 103,
@@ -164,20 +181,26 @@ describe('Results', () => {
       },
     });
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(searchImages).toHaveBeenCalledTimes(2);
     expect(searchImages).toHaveBeenCalledWith('car', 2, 30);
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(60);
+    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(60);
+    expect(toJSON()).toMatchSnapshot();
   });
 
   it('should not automatically fetch more results on end of scroll if the query has changed', async () => {
-    const { getByPlaceholderText, getByA11yRole, getByTestId } = setup();
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      getByTestId,
+      queryByA11yLabel,
+    } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
 
@@ -214,17 +237,16 @@ describe('Results', () => {
     const {
       getByPlaceholderText,
       getByA11yRole,
-      queryByTestId,
-      getByTestId,
       toJSON,
+      queryByA11yLabel,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'xxx');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(queryByTestId(testIds.noImagesFound)).toBeTruthy();
+    expect(queryByA11yLabel(accessibilityLabels.noImagesFound)).toBeTruthy();
     expect(toJSON()).toMatchSnapshot();
   });
 
@@ -232,15 +254,42 @@ describe('Results', () => {
     const {
       getByPlaceholderText,
       getByA11yRole,
-      getByTestId,
       queryByText,
+      toJSON,
+      queryByA11yLabel,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
     fireEvent.press(getByA11yRole('button'));
 
-    await waitFor(() => getByTestId(testIds.searchIcon));
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(queryByText('Total: 69982')).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should call navigateTo() from react-navigation upon clicking on an item', async () => {
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      getByTestId,
+      queryByTestId,
+      queryByA11yLabel,
+    } = setup();
+
+    fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
+    fireEvent.press(getByA11yRole('button'));
+
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
+
+    expect(queryByTestId('ZRns2R5azu0')).toBeTruthy();
+
+    fireEvent.press(getByTestId('ZRns2R5azu0'));
+
+    expect(navigation.navigate).toHaveBeenCalledTimes(1);
+    expect(navigation.navigate).toHaveBeenCalledWith(Routes.Gallery, {
+      url:
+        'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0',
+    });
   });
 });
