@@ -66,6 +66,8 @@ exports[`Results should fetch more results when the end of the list is reached 1
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -82,7 +84,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
@@ -110,7 +111,7 @@ exports[`Results should fetch more results when the end of the list is reached 1
   <RCTScrollView
     ListEmptyComponent={
       <NoImagesFound
-        testID="noImagesFound"
+        accessibilityLabel="No images found!"
         width={750}
       />
     }
@@ -10485,9 +10486,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10544,9 +10542,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10603,9 +10598,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10662,9 +10654,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10734,9 +10723,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10793,9 +10779,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1567808291548-fc3ee04dbcf0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10852,9 +10835,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10911,9 +10891,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -10983,9 +10960,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1498887960847-2a5e46312788?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11042,9 +11016,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11101,9 +11072,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11160,9 +11128,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11232,9 +11197,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11291,9 +11253,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11350,9 +11309,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11409,9 +11365,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11481,9 +11434,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11540,9 +11490,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1470162015499-2b9772941cde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11599,9 +11546,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11658,9 +11602,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11730,9 +11671,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11789,9 +11727,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1487101588220-01e039029925?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11848,9 +11783,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11907,9 +11839,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1569171206684-dfb2749d96fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -11979,9 +11908,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1547570456-0e4070952418?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12038,9 +11964,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12097,9 +12020,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541447270888-83e8494f9c06?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12156,9 +12076,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12228,9 +12145,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12287,9 +12201,6 @@ exports[`Results should fetch more results when the end of the list is reached 1
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -12379,6 +12290,8 @@ exports[`Results should fetch more results when the end of the list is reached 2
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -12395,7 +12308,6 @@ exports[`Results should fetch more results when the end of the list is reached 2
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
@@ -12423,7 +12335,7 @@ exports[`Results should fetch more results when the end of the list is reached 2
   <RCTScrollView
     ListEmptyComponent={
       <NoImagesFound
-        testID="noImagesFound"
+        accessibilityLabel="No images found!"
         width={750}
       />
     }
@@ -33262,9 +33174,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33321,9 +33230,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33380,9 +33286,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33439,9 +33342,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33511,9 +33411,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33570,9 +33467,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1567808291548-fc3ee04dbcf0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33629,9 +33523,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33688,9 +33579,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33760,9 +33648,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1498887960847-2a5e46312788?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33819,9 +33704,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33878,9 +33760,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -33937,9 +33816,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34009,9 +33885,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34068,9 +33941,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34127,9 +33997,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34186,9 +34053,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34258,9 +34122,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34317,9 +34178,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1470162015499-2b9772941cde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34376,9 +34234,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34435,9 +34290,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34507,9 +34359,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34566,9 +34415,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1487101588220-01e039029925?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34625,9 +34471,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34684,9 +34527,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1569171206684-dfb2749d96fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34756,9 +34596,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1547570456-0e4070952418?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34815,9 +34652,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34874,9 +34708,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541447270888-83e8494f9c06?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -34933,9 +34764,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35005,9 +34833,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35064,9 +34889,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35123,9 +34945,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1546768292-fb12f6c92568?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35182,9 +35001,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1532988633349-d3dfb28ee834?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35254,9 +35070,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35313,9 +35126,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1520340356584-f9917d1eea6f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35372,9 +35182,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541443131876-44b03de101c5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35431,9 +35238,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1518306727298-4c17e1bf6942?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35503,9 +35307,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35562,9 +35363,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1471174617910-3e9c04f58ff5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35621,9 +35419,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1471479917193-f00955256257?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35680,9 +35475,6 @@ Owner of Flash Creative Digital Media
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1514316703755-dca7d7d9d882?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -35779,6 +35571,8 @@ exports[`Results should instruct the user to search for something on launch 1`] 
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -35795,38 +35589,28 @@ exports[`Results should instruct the user to search for something on launch 1`] 
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
     </View>
   </View>
   <RNSVGSvgView
+    accessibilityLabel="Search for something!"
     align="xMidYMid"
     bbHeight={411}
-    bbWidth={750}
     focusable={false}
     height={411}
     meetOrSlice={0}
     minX={0}
     minY={0}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
-        },
-        Object {
-          "flex": 0,
-          "height": 411,
-          "width": 750,
-        },
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      }
     }
-    testID="searchForSomething"
     vbHeight={462.827}
     vbWidth={844.907}
-    width={750}
   >
     <RNSVGGroup>
       <RNSVGPath
@@ -36566,6 +36350,8 @@ exports[`Results should show no images found if there are no results 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -36582,7 +36368,6 @@ exports[`Results should show no images found if there are no results 1`] = `
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
@@ -36610,7 +36395,7 @@ exports[`Results should show no images found if there are no results 1`] = `
   <RCTScrollView
     ListEmptyComponent={
       <NoImagesFound
-        testID="noImagesFound"
+        accessibilityLabel="No images found!"
         width={750}
       />
     }
@@ -36653,32 +36438,23 @@ exports[`Results should show no images found if there are no results 1`] = `
   >
     <View>
       <RNSVGSvgView
+        accessibilityLabel="No images found!"
+        accessibilityRole="image"
         align="xMidYMid"
         bbHeight={552}
-        bbWidth={750}
         focusable={false}
         height={552}
         meetOrSlice={0}
         minX={0}
         minY={0}
-        onLayout={[Function]}
         style={
-          Array [
-            Object {
-              "backgroundColor": "transparent",
-              "borderWidth": 0,
-            },
-            Object {
-              "flex": 0,
-              "height": 552,
-              "width": 750,
-            },
-          ]
+          Object {
+            "backgroundColor": "transparent",
+            "borderWidth": 0,
+          }
         }
-        testID="noImagesFound"
         vbHeight={590.747}
         vbWidth={802.067}
-        width={750}
       >
         <RNSVGGroup>
           <RNSVGPath
@@ -37348,6 +37124,8 @@ exports[`Results should show the total number of results 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -37364,7 +37142,6 @@ exports[`Results should show the total number of results 1`] = `
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
@@ -37392,7 +37169,7 @@ exports[`Results should show the total number of results 1`] = `
   <RCTScrollView
     ListEmptyComponent={
       <NoImagesFound
-        testID="noImagesFound"
+        accessibilityLabel="No images found!"
         width={750}
       />
     }
@@ -47767,9 +47544,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -47826,9 +47600,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1489824904134-891ab64532f1?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -47885,9 +47656,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542362567-b07e54358753?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -47944,9 +47712,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1542282088-fe8426682b8f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48016,9 +47781,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1550355291-bbee04a92027?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48075,9 +47837,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1567808291548-fc3ee04dbcf0?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48134,9 +47893,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1504215680853-026ed2a45def?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48193,9 +47949,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48265,9 +48018,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1498887960847-2a5e46312788?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48324,9 +48074,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1532974297617-c0f05fe48bff?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48383,9 +48130,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1511919884226-fd3cad34687c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48442,9 +48186,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1493238792000-8113da705763?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48514,9 +48255,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485291571150-772bcfc10da5?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48573,9 +48311,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1514316454349-750a7fd3da3a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48632,9 +48367,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1503376780353-7e6692767b70?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48691,9 +48423,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1506671753197-8d137cc5d53c?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48763,9 +48492,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48822,9 +48548,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1470162015499-2b9772941cde?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48881,9 +48604,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549399542-7e3f8b79c341?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -48940,9 +48660,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1529369623266-f5264b696110?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49012,9 +48729,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1502877338535-766e1452684a?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49071,9 +48785,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1487101588220-01e039029925?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49130,9 +48841,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1494905998402-395d579af36f?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49189,9 +48897,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1569171206684-dfb2749d96fd?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49261,9 +48966,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1547570456-0e4070952418?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49320,9 +49022,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49379,9 +49078,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541447270888-83e8494f9c06?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49438,9 +49134,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1541899481282-d53bffe3c35d?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49510,9 +49203,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1485463611174-f302f6a5c1c9?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49569,9 +49259,6 @@ exports[`Results should show the total number of results 1`] = `
                 resizeMode="cover"
                 source={
                   Object {
-                    "headers": Object {
-                      "Authorization": "someAuthToken",
-                    },
                     "priority": "normal",
                     "uri": "https://images.unsplash.com/photo-1544636331-e26879cd4d9b?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=200&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0",
                   }
@@ -49661,6 +49348,8 @@ exports[`Search should render correctly 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -49677,38 +49366,28 @@ exports[`Search should render correctly 1`] = `
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
     </View>
   </View>
   <RNSVGSvgView
+    accessibilityLabel="Search for something!"
     align="xMidYMid"
     bbHeight={411}
-    bbWidth={750}
     focusable={false}
     height={411}
     meetOrSlice={0}
     minX={0}
     minY={0}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
-        },
-        Object {
-          "flex": 0,
-          "height": 411,
-          "width": 750,
-        },
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      }
     }
-    testID="searchForSomething"
     vbHeight={462.827}
     vbWidth={844.907}
-    width={750}
   >
     <RNSVGGroup>
       <RNSVGPath
@@ -50448,6 +50127,8 @@ exports[`Search should show an error message if API failed 1`] = `
       }
     >
       <Text
+        accessibilityLabel="Search"
+        accessibilityRole="imagebutton"
         allowFontScaling={false}
         style={
           Array [
@@ -50464,7 +50145,6 @@ exports[`Search should show an error message if API failed 1`] = `
             Object {},
           ]
         }
-        testID="searchIcon"
       >
         󰥷
       </Text>
@@ -50488,31 +50168,22 @@ exports[`Search should show an error message if API failed 1`] = `
     </Text>
   </View>
   <RNSVGSvgView
+    accessibilityLabel="Search for something!"
     align="xMidYMid"
     bbHeight={411}
-    bbWidth={750}
     focusable={false}
     height={411}
     meetOrSlice={0}
     minX={0}
     minY={0}
     style={
-      Array [
-        Object {
-          "backgroundColor": "transparent",
-          "borderWidth": 0,
-        },
-        Object {
-          "flex": 0,
-          "height": 411,
-          "width": 750,
-        },
-      ]
+      Object {
+        "backgroundColor": "transparent",
+        "borderWidth": 0,
+      }
     }
-    testID="searchForSomething"
     vbHeight={462.827}
     vbWidth={844.907}
-    width={750}
   >
     <RNSVGGroup>
       <RNSVGPath

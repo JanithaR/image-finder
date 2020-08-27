@@ -27,6 +27,7 @@ import { Routes } from '../enums/Routes';
 import { StackNavigationProp } from '@react-navigation/stack';
 import { RootStackParamList } from '../types/RootStackParamList';
 import { ImageThumb } from '../components/ImageThumb';
+import accessibilityLabels from '../accessibilityLabels';
 
 const COLUMNS: number = 4;
 const windowWidth: number = Dimensions.get('window').width;
@@ -141,9 +142,17 @@ export function SearchScreen({ navigation }: Props) {
 
   const onItemPress = React.useCallback(
     (id: string): void => {
-      navigation.navigate(Routes.Gallery, { id });
+      if (searchResults) {
+        const image: Result | undefined = searchResults?.results.find(
+          (result) => result.id === id,
+        );
+
+        if (image) {
+          navigation.navigate(Routes.Gallery, { url: image.urls.regular });
+        }
+      }
     },
-    [navigation],
+    [navigation, searchResults],
   );
 
   const renderItem = React.useCallback(
@@ -188,14 +197,15 @@ export function SearchScreen({ navigation }: Props) {
               <ActivityIndicator
                 size="small"
                 color={colors.primaryYellow}
-                testID={testIds.activityIndicator}
+                accessibilityRole="progressbar"
               />
             ) : (
               <Icon
                 name="image-search"
                 size={30}
                 color={colors.primaryYellow}
-                testID={testIds.searchIcon}
+                accessibilityRole="imagebutton"
+                accessibilityLabel={accessibilityLabels.search}
               />
             )}
           </Pressable>
@@ -214,7 +224,7 @@ export function SearchScreen({ navigation }: Props) {
             extraData={searchResults}
             ListEmptyComponent={
               <NoImagesFound
-                testID={testIds.noImagesFound}
+                accessibilityLabel={accessibilityLabels.noImagesFound}
                 width={windowWidth}
               />
             }
@@ -222,7 +232,7 @@ export function SearchScreen({ navigation }: Props) {
         ) : (
           <SearchForSomething
             width={windowWidth}
-            testID={testIds.searchForSomething}
+            accessibilityLabel={accessibilityLabels.searchForSomething}
           />
         )}
       </SafeAreaView>

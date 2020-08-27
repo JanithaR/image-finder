@@ -27,7 +27,6 @@ export function ImageThumb({
         style={[styles.image, { width: thumbSize, height: thumbSize }]}
         source={{
           uri: url,
-          headers: { Authorization: 'someAuthToken' },
           priority: FastImage.priority.normal,
         }}
         resizeMode={FastImage.resizeMode.cover}

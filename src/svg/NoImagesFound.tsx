@@ -3,15 +3,16 @@ import Svg, { Path } from 'react-native-svg';
 
 interface Props {
   width: number;
-  testID: string;
+  accessibilityLabel: string;
 }
 
-export function NoImagesFound(props: Props) {
+export function NoImagesFound({ width, accessibilityLabel }: Props) {
   return (
     <Svg
       viewBox="0 0 802.067 590.747"
-      height={Math.round(props.width / (802.067 / 590.747))}
-      {...props}>
+      height={Math.round(width / (802.067 / 590.747))}
+      accessibilityRole="image"
+      accessibilityLabel={accessibilityLabel}>
       <Path
         d="M325.404 383.323L175.797 483.389 28.454 263.1 178.06 163.033l147.343 220.29"
         fill="#f3f2f1"
