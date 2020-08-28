@@ -132,7 +132,9 @@ export function SearchScreen({ navigation }: Props) {
     if (searchResults) {
       return (
         <View style={styles.resultsMetaWrapper}>
-          <Text style={styles.total}>Total: {searchResults.total}</Text>
+          <Text style={styles.total}>
+            {searchResults.results.length}/{searchResults.total}
+          </Text>
         </View>
       );
     }
@@ -164,6 +166,7 @@ export function SearchScreen({ navigation }: Props) {
           thumbSize={thumbSize}
           url={item.urls.thumb}
           testId={item.id}
+          color={item.color}
         />
       );
     },
@@ -228,6 +231,13 @@ export function SearchScreen({ navigation }: Props) {
                 width={windowWidth}
               />
             }
+            getItemLayout={(data, index) => ({
+              length: thumbSize,
+              offset: thumbSize * index,
+              index,
+            })}
+            onEndReachedThreshold={1}
+            refreshing={loading}
           />
         ) : (
           <SearchForSomething

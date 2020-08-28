@@ -111,11 +111,33 @@ describe('Results', () => {
   });
 
   it('should instruct the user to search for something on launch', () => {
-    const { queryByA11yLabel, toJSON } = setup();
+    const { queryByA11yLabel, toJSON, queryByText } = setup();
 
     expect(
       queryByA11yLabel(accessibilityLabels.searchForSomething),
     ).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
+    expect(queryByText(/^[0-9]+\/[0-9]+$:*/)).toBeFalsy();
+  });
+
+  it('should show results and meta data upon successfully retrieving data', async () => {
+    const {
+      getByPlaceholderText,
+      getByA11yRole,
+      queryByA11yLabel,
+      queryByText,
+      toJSON,
+      queryByA11yRole,
+    } = setup();
+
+    fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
+    fireEvent.press(getByA11yRole('button'));
+    expect(queryByA11yRole('progressbar')).toBeTruthy();
+
+    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
+
+    expect(queryByText('30/69982')).toBeTruthy();
+
     expect(toJSON()).toMatchSnapshot();
   });
 
@@ -125,7 +147,7 @@ describe('Results', () => {
       getByA11yRole,
       getByDisplayValue,
       queryByA11yLabel,
-      queryByTestId,
+      queryByText,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
@@ -133,14 +155,14 @@ describe('Results', () => {
 
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByText('30/69982')).toBeTruthy();
 
     fireEvent.changeText(getByDisplayValue('car'), 'bus');
     fireEvent.press(getByA11yRole('button'));
 
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByText('30/69982')).toBeTruthy();
   });
 
   it('should fetch more results when the end of the list is reached', async () => {
@@ -151,8 +173,9 @@ describe('Results', () => {
       getByPlaceholderText,
       getByA11yRole,
       queryByTestId,
-      toJSON,
       queryByA11yLabel,
+      queryByText,
+      queryByA11yRole,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
@@ -160,8 +183,7 @@ describe('Results', () => {
 
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(30);
-    expect(toJSON()).toMatchSnapshot();
+    expect(queryByText('30/69982')).toBeTruthy();
 
     fireEvent.scroll(queryByTestId(testIds.resultsList), {
       nativeEvent: {
@@ -181,12 +203,13 @@ describe('Results', () => {
       },
     });
 
+    expect(queryByA11yRole('progressbar')).toBeTruthy();
+
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(searchImages).toHaveBeenCalledTimes(2);
     expect(searchImages).toHaveBeenCalledWith('car', 2, 30);
-    expect(queryByTestId(testIds.resultsList).props.data).toHaveLength(60);
-    expect(toJSON()).toMatchSnapshot();
+    expect(queryByText('60/69982')).toBeTruthy();
   });
 
   it('should not automatically fetch more results on end of scroll if the query has changed', async () => {
@@ -195,6 +218,7 @@ describe('Results', () => {
       getByA11yRole,
       getByTestId,
       queryByA11yLabel,
+      queryByText,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
@@ -202,7 +226,7 @@ describe('Results', () => {
 
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
-    expect(getByTestId(testIds.resultsList).props.data).toHaveLength(30);
+    expect(queryByText('30/69982')).toBeTruthy();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'bus');
 
@@ -225,6 +249,7 @@ describe('Results', () => {
     });
 
     expect(searchImages).toHaveBeenCalledTimes(1);
+    expect(queryByText('30/69982')).toBeTruthy();
   });
 
   it('should show no images found if there are no results', async () => {
@@ -239,6 +264,7 @@ describe('Results', () => {
       getByA11yRole,
       toJSON,
       queryByA11yLabel,
+      queryByText,
     } = setup();
 
     fireEvent.changeText(getByPlaceholderText('Search Images'), 'xxx');
@@ -247,24 +273,7 @@ describe('Results', () => {
     await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
 
     expect(queryByA11yLabel(accessibilityLabels.noImagesFound)).toBeTruthy();
-    expect(toJSON()).toMatchSnapshot();
-  });
-
-  it('should show the total number of results', async () => {
-    const {
-      getByPlaceholderText,
-      getByA11yRole,
-      queryByText,
-      toJSON,
-      queryByA11yLabel,
-    } = setup();
-
-    fireEvent.changeText(getByPlaceholderText('Search Images'), 'car');
-    fireEvent.press(getByA11yRole('button'));
-
-    await waitFor(() => queryByA11yLabel(accessibilityLabels.search));
-
-    expect(queryByText('Total: 69982')).toBeTruthy();
+    expect(queryByText('0/0')).toBeTruthy();
     expect(toJSON()).toMatchSnapshot();
   });
 
