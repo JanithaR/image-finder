@@ -8,6 +8,7 @@ type Props = {
   thumbSize: number;
   url: string;
   testId: string;
+  color: string;
 };
 
 export function ImageThumb({
@@ -16,6 +17,7 @@ export function ImageThumb({
   thumbSize,
   url,
   testId,
+  color,
 }: Props): ReactElement {
   function onThumbPress(): void {
     onPress(id);
@@ -24,7 +26,10 @@ export function ImageThumb({
   return (
     <TouchableOpacity onPress={onThumbPress} testID={testId}>
       <FastImage
-        style={[styles.image, { width: thumbSize, height: thumbSize }]}
+        style={[
+          styles.image,
+          { width: thumbSize, height: thumbSize, backgroundColor: color },
+        ]}
         source={{
           uri: url,
           priority: FastImage.priority.normal,
