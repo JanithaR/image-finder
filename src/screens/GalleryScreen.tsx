@@ -4,6 +4,8 @@ import {
   StyleSheet,
   StatusBar,
   SafeAreaView,
+  Text,
+  View,
 } from 'react-native';
 import { RouteProp } from '@react-navigation/native';
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
@@ -32,7 +34,7 @@ export function GalleryScreen({ route, navigation }: Props) {
     navigation.goBack();
   }, [navigation]);
 
-  const { url } = route.params;
+  const { url, altDescription, photographerName } = route.params;
 
   const images = React.useMemo(() => [{ source: { uri: url } }], [url]);
 
@@ -44,7 +46,10 @@ export function GalleryScreen({ route, navigation }: Props) {
           style={styles.gallery}
           images={images}
           imageComponent={(imageProps: { source: { uri: string } }) => (
-            <GalleryImage imageProps={imageProps} />
+            <GalleryImage
+              uri={imageProps.source.uri}
+              altDescription={altDescription}
+            />
           )}
         />
         <TouchableOpacity
@@ -59,13 +64,17 @@ export function GalleryScreen({ route, navigation }: Props) {
             accessibilityLabel={accessibilityLabels.close}
           />
         </TouchableOpacity>
+        <View style={styles.creditsWrapper}>
+          <Text style={styles.photographer}>Photographer</Text>
+          <Text style={styles.photographerName}>{photographerName}</Text>
+        </View>
       </SafeAreaView>
     </>
   );
 }
 
 const styles = StyleSheet.create({
-  gallery: { flex: 1, backgroundColor: 'black' },
+  gallery: { backgroundColor: 'black' },
   closeButtonWrapper: {
     width: 32,
     height: 32,
@@ -77,5 +86,19 @@ const styles = StyleSheet.create({
   },
   mainWrapper: {
     flex: 1,
+  },
+  creditsWrapper: {
+    position: 'absolute',
+    bottom: 20,
+    left: 20,
+  },
+  photographerName: {
+    color: 'white',
+    fontWeight: 'bold',
+    fontSize: 24,
+  },
+  photographer: {
+    color: 'white',
+    fontSize: 10,
   },
 });

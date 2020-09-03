@@ -7,6 +7,8 @@ import accessibilityLabels from '../accessibilityLabels';
 const route = {
   params: {
     url: 'fake_image_url',
+    altDescription: 'fake_alt_description',
+    photographerName: 'John Doe',
   },
 };
 
@@ -61,6 +63,20 @@ describe('Gallery', () => {
       queryByA11yRole('image').props.onFastImageError();
     });
     expect(queryByA11yRole('progressbar')).toBeFalsy();
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should have alt description as accessibilty label', () => {
+    const { queryByA11yLabel } = setup();
+
+    expect(queryByA11yLabel('fake_alt_description')).toBeTruthy();
+  });
+
+  it("should show the photographer's name", () => {
+    const { queryByText, toJSON } = setup();
+
+    expect(queryByText('Photographer')).toBeTruthy();
+    expect(queryByText('John Doe')).toBeTruthy();
     expect(toJSON()).toMatchSnapshot();
   });
 });
