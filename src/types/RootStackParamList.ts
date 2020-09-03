@@ -1,4 +1,4 @@
 export type RootStackParamList = {
   Search: undefined;
-  Gallery: { url: string };
+  Gallery: { url: string; altDescription: string; photographerName: string };
 };

@@ -150,7 +150,11 @@ export function SearchScreen({ navigation }: Props) {
         );
 
         if (image) {
-          navigation.navigate(Routes.Gallery, { url: image.urls.regular });
+          navigation.navigate(Routes.Gallery, {
+            url: image.urls.regular,
+            altDescription: image.alt_description ? image.alt_description : '',
+            photographerName: image.user.name,
+          });
         }
       }
     },

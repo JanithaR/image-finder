@@ -59,7 +59,6 @@ exports[`Close button should show a close button 1`] = `
       Array [
         Object {
           "backgroundColor": "black",
-          "flex": 1,
         },
         Object {
           "flex": 1,
@@ -176,6 +175,7 @@ exports[`Close button should show a close button 1`] = `
                 }
               >
                 <FastImageView
+                  accessibilityLabel="fake_alt_description"
                   accessibilityRole="image"
                   onFastImageError={[Function]}
                   onFastImageLoad={[Function]}
@@ -251,6 +251,37 @@ exports[`Close button should show a close button 1`] = `
       󰅖
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "position": "absolute",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+        }
+      }
+    >
+      Photographer
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      John Doe
+    </Text>
+  </View>
 </RCTSafeAreaView>
 `;
 
@@ -313,7 +344,6 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       Array [
         Object {
           "backgroundColor": "black",
-          "flex": 1,
         },
         Object {
           "flex": 1,
@@ -430,6 +460,7 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
                 }
               >
                 <FastImageView
+                  accessibilityLabel="fake_alt_description"
                   accessibilityRole="image"
                   onFastImageError={[Function]}
                   onFastImageLoad={[Function]}
@@ -524,6 +555,37 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       󰅖
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "position": "absolute",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+        }
+      }
+    >
+      Photographer
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      John Doe
+    </Text>
+  </View>
 </RCTSafeAreaView>
 `;
 
@@ -586,7 +648,6 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       Array [
         Object {
           "backgroundColor": "black",
-          "flex": 1,
         },
         Object {
           "flex": 1,
@@ -703,6 +764,7 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
                 }
               >
                 <FastImageView
+                  accessibilityLabel="fake_alt_description"
                   accessibilityRole="image"
                   onFastImageError={[Function]}
                   onFastImageLoad={[Function]}
@@ -778,6 +840,37 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       󰅖
     </Text>
   </View>
+  <View
+    style={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "position": "absolute",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+        }
+      }
+    >
+      Photographer
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      John Doe
+    </Text>
+  </View>
 </RCTSafeAreaView>
 `;
 
@@ -840,7 +933,6 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       Array [
         Object {
           "backgroundColor": "black",
-          "flex": 1,
         },
         Object {
           "flex": 1,
@@ -957,6 +1049,7 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
                 }
               >
                 <FastImageView
+                  accessibilityLabel="fake_alt_description"
                   accessibilityRole="image"
                   onFastImageError={[Function]}
                   onFastImageLoad={[Function]}
@@ -1030,6 +1123,322 @@ exports[`Gallery should show an activitiy indicator only when loading the image 
       }
     >
       󰅖
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "position": "absolute",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+        }
+      }
+    >
+      Photographer
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      John Doe
+    </Text>
+  </View>
+</RCTSafeAreaView>
+`;
+
+exports[`Gallery should show the photographer's name 1`] = `
+<RCTSafeAreaView
+  emulateUnlessSupported={true}
+  style={
+    Object {
+      "flex": 1,
+    }
+  }
+>
+  <View
+    flatListProps={
+      Object {
+        "windowSize": 3,
+      }
+    }
+    imageComponent={[Function]}
+    images={
+      Array [
+        Object {
+          "source": Object {
+            "uri": "fake_image_url",
+          },
+        },
+      ]
+    }
+    initialListSize={10}
+    initialPage={0}
+    onMoveShouldSetResponder={[Function]}
+    onMoveShouldSetResponderCapture={[Function]}
+    onPageScrollStateChanged={[Function]}
+    onPageSelected={[Function]}
+    onResponderEnd={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderReject={[Function]}
+    onResponderRelease={[Function]}
+    onResponderStart={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    onStartShouldSetResponderCapture={[Function]}
+    pageDataArray={
+      Array [
+        Object {
+          "source": Object {
+            "uri": "fake_image_url",
+          },
+        },
+      ]
+    }
+    pageMargin={0}
+    removeClippedSubviews={true}
+    renderPage={[Function]}
+    scrollEnabled={false}
+    scrollViewStyle={Object {}}
+    style={
+      Array [
+        Object {
+          "backgroundColor": "black",
+        },
+        Object {
+          "flex": 1,
+        },
+      ]
+    }
+  >
+    <RCTScrollView
+      contentOffset={
+        Object {
+          "x": 0,
+          "y": 0,
+        }
+      }
+      data={
+        Array [
+          Object {
+            "source": Object {
+              "uri": "fake_image_url",
+            },
+          },
+        ]
+      }
+      disableVirtualization={false}
+      getItem={[Function]}
+      getItemCount={[Function]}
+      horizontal={true}
+      initialNumToRender={10}
+      keyExtractor={[Function]}
+      maxToRenderPerBatch={10}
+      onContentSizeChange={[Function]}
+      onEndReachedThreshold={2}
+      onLayout={[Function]}
+      onMomentumScrollEnd={[Function]}
+      onScroll={[Function]}
+      onScrollBeginDrag={[Function]}
+      onScrollEndDrag={[Function]}
+      removeClippedSubviews={false}
+      renderItem={[Function]}
+      scrollEnabled={false}
+      scrollEventThrottle={50}
+      stickyHeaderIndices={Array []}
+      style={
+        Array [
+          Object {
+            "flex": 1,
+          },
+          Object {},
+        ]
+      }
+      updateCellsBatchingPeriod={50}
+      viewabilityConfigCallbackPairs={Array []}
+      windowSize={3}
+    >
+      <View>
+        <View
+          onLayout={[Function]}
+          style={
+            Array [
+              Object {
+                "flexDirection": "row",
+              },
+              null,
+            ]
+          }
+        >
+          <View
+            enableResistance={true}
+            enableScale={true}
+            enableTransform={false}
+            enableTranslate={true}
+            maxOverScrollDistance={20}
+            maxScale={1}
+            onLayout={[Function]}
+            onTransformGestureReleased={[Function]}
+            onViewTransformed={[Function]}
+            style={
+              Object {
+                "height": 1334,
+                "position": "relative",
+                "width": 750,
+              }
+            }
+          >
+            <View
+              style={
+                Object {
+                  "flex": 1,
+                  "transform": Array [
+                    Object {
+                      "scale": 1,
+                    },
+                    Object {
+                      "translateX": 0,
+                    },
+                    Object {
+                      "translateY": 0,
+                    },
+                  ],
+                }
+              }
+            >
+              <View
+                style={
+                  Array [
+                    Object {
+                      "overflow": "hidden",
+                    },
+                    Object {
+                      "height": 1334,
+                      "width": 750,
+                    },
+                  ]
+                }
+              >
+                <FastImageView
+                  accessibilityLabel="fake_alt_description"
+                  accessibilityRole="image"
+                  onFastImageError={[Function]}
+                  onFastImageLoad={[Function]}
+                  onFastImageLoadStart={[Function]}
+                  resizeMode="contain"
+                  source={
+                    Object {
+                      "priority": "normal",
+                      "uri": "fake_image_url",
+                    }
+                  }
+                  style={
+                    Object {
+                      "bottom": 0,
+                      "left": 0,
+                      "position": "absolute",
+                      "right": 0,
+                      "top": 0,
+                    }
+                  }
+                />
+              </View>
+            </View>
+          </View>
+        </View>
+      </View>
+    </RCTScrollView>
+  </View>
+  <View
+    accessibilityRole="button"
+    accessible={true}
+    focusable={true}
+    onClick={[Function]}
+    onResponderGrant={[Function]}
+    onResponderMove={[Function]}
+    onResponderRelease={[Function]}
+    onResponderTerminate={[Function]}
+    onResponderTerminationRequest={[Function]}
+    onStartShouldSetResponder={[Function]}
+    style={
+      Object {
+        "alignItems": "center",
+        "height": 32,
+        "justifyContent": "center",
+        "opacity": 1,
+        "position": "absolute",
+        "right": 20,
+        "top": 20,
+        "width": 32,
+      }
+    }
+  >
+    <Text
+      accessibilityLabel="Close"
+      accessibilityRole="imagebutton"
+      allowFontScaling={false}
+      style={
+        Array [
+          Object {
+            "color": "white",
+            "fontSize": 30,
+          },
+          undefined,
+          Object {
+            "fontFamily": "Material Design Icons",
+            "fontStyle": "normal",
+            "fontWeight": "normal",
+          },
+          Object {},
+        ]
+      }
+    >
+      󰅖
+    </Text>
+  </View>
+  <View
+    style={
+      Object {
+        "bottom": 20,
+        "left": 20,
+        "position": "absolute",
+      }
+    }
+  >
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 10,
+        }
+      }
+    >
+      Photographer
+    </Text>
+    <Text
+      style={
+        Object {
+          "color": "white",
+          "fontSize": 24,
+          "fontWeight": "bold",
+        }
+      }
+    >
+      John Doe
     </Text>
   </View>
 </RCTSafeAreaView>

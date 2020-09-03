@@ -299,6 +299,8 @@ describe('Results', () => {
     expect(navigation.navigate).toHaveBeenCalledWith(Routes.Gallery, {
       url:
         'https://images.unsplash.com/photo-1568605117036-5fe5e7bab0b7?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjE1ODYzOX0',
+      altDescription: 'silver sports coupe on asphalt road',
+      photographerName: 'Erik Mclean',
     });
   });
 });

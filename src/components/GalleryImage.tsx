@@ -3,17 +3,14 @@ import FastImage from 'react-native-fast-image';
 import { ActivityIndicator, Dimensions, View, StyleSheet } from 'react-native';
 
 type Props = {
-  imageProps: {
-    source: {
-      uri: string;
-    };
-  };
+  uri: string;
+  altDescription: string | 'no alt description provided';
 };
 
 const windowWidth: number = Dimensions.get('window').width;
 const windowHeight: number = Dimensions.get('window').height;
 
-export function GalleryImage({ imageProps }: Props) {
+export function GalleryImage({ uri, altDescription }: Props) {
   const [loading, setLoading] = React.useState<boolean>(false);
 
   const onLoadStart = React.useCallback((): void => {
@@ -49,7 +46,7 @@ export function GalleryImage({ imageProps }: Props) {
       <FastImage
         style={styles.image}
         source={{
-          uri: imageProps.source.uri,
+          uri,
           priority: FastImage.priority.normal,
         }}
         resizeMode={FastImage.resizeMode.contain}
@@ -57,6 +54,7 @@ export function GalleryImage({ imageProps }: Props) {
         onLoad={onLoad}
         onError={onError}
         accessibilityRole="image"
+        accessibilityLabel={altDescription}
       />
       {renderActivityIndicator()}
     </>
