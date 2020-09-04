@@ -16,6 +16,7 @@ import { RootStackParamList } from '../types/RootStackParamList';
 import { Routes } from '../enums/Routes';
 import { GalleryImage } from '../components/GalleryImage';
 import accessibilityLabels from '../accessibilityLabels';
+import { getOS } from '../utils';
 
 type GalleryScreenRouteProp = RouteProp<RootStackParamList, Routes.Gallery>;
 
@@ -55,7 +56,10 @@ export function GalleryScreen({ route, navigation }: Props) {
         <TouchableOpacity
           accessibilityRole="button"
           onPress={onClosePress}
-          style={styles.closeButtonWrapper}>
+          style={StyleSheet.flatten([
+            styles.closeButtonWrapper,
+            { top: getOS() === 'ios' ? 40 : 20 },
+          ])}>
           <Icon
             name="close"
             size={30}
@@ -64,7 +68,11 @@ export function GalleryScreen({ route, navigation }: Props) {
             accessibilityLabel={accessibilityLabels.close}
           />
         </TouchableOpacity>
-        <View style={styles.creditsWrapper}>
+        <View
+          style={StyleSheet.flatten([
+            styles.creditsWrapper,
+            { bottom: getOS() === 'ios' ? 40 : 20 },
+          ])}>
           <Text style={styles.photographer}>Photographer</Text>
           <Text style={styles.photographerName}>{photographerName}</Text>
         </View>
@@ -81,15 +89,14 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
     position: 'absolute',
-    top: 20,
     right: 20,
   },
   mainWrapper: {
     flex: 1,
+    backgroundColor: 'black',
   },
   creditsWrapper: {
     position: 'absolute',
-    bottom: 20,
     left: 20,
   },
   photographerName: {
