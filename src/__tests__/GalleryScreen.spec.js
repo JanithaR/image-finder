@@ -3,6 +3,11 @@ import { render, fireEvent, act } from '@testing-library/react-native';
 
 import { GalleryScreen } from 'src/screens/GalleryScreen';
 import accessibilityLabels from '../accessibilityLabels';
+import { getOS } from '../utils';
+
+jest.mock('../utils', () => ({
+  getOS: jest.fn().mockReturnValue('ios'),
+}));
 
 const route = {
   params: {
@@ -21,7 +26,18 @@ function setup() {
 }
 
 describe('Close button', () => {
-  it('should show a close button', () => {
+  it('should be rendered correctly on iOS', () => {
+    const { queryByA11yRole, queryByA11yLabel, toJSON } = setup();
+
+    expect(queryByA11yRole('button')).toBeTruthy();
+    expect(queryByA11yLabel(accessibilityLabels.close)).toBeTruthy();
+
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it('should be rendered correctly on Android', () => {
+    getOS.mockReturnValueOnce('android').mockReturnValueOnce('android');
+
     const { queryByA11yRole, queryByA11yLabel, toJSON } = setup();
 
     expect(queryByA11yRole('button')).toBeTruthy();
@@ -72,7 +88,17 @@ describe('Gallery', () => {
     expect(queryByA11yLabel('fake_alt_description')).toBeTruthy();
   });
 
-  it("should show the photographer's name", () => {
+  it("should show the photographer's name correcly on iOS", () => {
+    const { queryByText, toJSON } = setup();
+
+    expect(queryByText('Photographer')).toBeTruthy();
+    expect(queryByText('John Doe')).toBeTruthy();
+    expect(toJSON()).toMatchSnapshot();
+  });
+
+  it("should show the photographer's name correcly on Android", () => {
+    getOS.mockReturnValueOnce('android').mockReturnValueOnce('android');
+
     const { queryByText, toJSON } = setup();
 
     expect(queryByText('Photographer')).toBeTruthy();
